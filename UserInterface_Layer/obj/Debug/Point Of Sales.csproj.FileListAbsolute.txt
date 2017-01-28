@@ -1,0 +1,33 @@
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Point Of Sales.exe.config
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Point Of Sales.exe
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Point Of Sales.pdb
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Antlr3.Runtime.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\EntityFramework.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\MetroFramework.Design.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\MetroFramework.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\MetroFramework.Fonts.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Microsoft.Web.Infrastructure.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Newtonsoft.Json.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\System.Web.Optimization.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\WebActivatorEx.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\WebGrease.dll
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Antlr3.Runtime.pdb
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\EntityFramework.xml
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Newtonsoft.Json.xml
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\System.Web.Optimization.xml
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.Form2.resources
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.Properties.Resources.resources
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point Of Sales.csproj.GenerateResource.Cache
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point Of Sales.exe
+c:\users\radianceitsolution\documents\visual studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point Of Sales.pdb
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.AddProduct_Form.resources
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.AddCatagory_Form.resources
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.AddCustomer_Form.resources
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.AddEmployee_From.resources
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.AddSupplier_Form.resources
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point_Of_Sales.LoginForm.resources
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Insight.Database.Schema.dll
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\bin\Debug\Insight.Database.Schema.pdb
+C:\Users\RadianceITSolution\Documents\Visual Studio 2013\Projects\Point Of Sales\Point Of Sales\obj\Debug\Point Of Sales.csprojResolveAssemblyReference.cache

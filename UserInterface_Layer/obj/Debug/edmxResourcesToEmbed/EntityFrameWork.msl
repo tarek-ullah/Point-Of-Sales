@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="point_of_sales_dbModelStoreContainer" CdmEntityContainer="point_of_sales_dbEntities2">
+    <EntitySetMapping Name="Catagory_Table">
+      <EntityTypeMapping TypeName="point_of_sales_dbModel.Catagory_Table">
+        <MappingFragment StoreEntitySet="Catagory_Table">
+          <ScalarProperty Name="Catagory_ID" ColumnName="Catagory_ID" />
+          <ScalarProperty Name="Catagory_Name" ColumnName="Catagory_Name" />
+          <ScalarProperty Name="Catagory_Unit" ColumnName="Catagory_Unit" />
+          <ScalarProperty Name="Catagory_Description" ColumnName="Catagory_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_Table">
+      <EntityTypeMapping TypeName="point_of_sales_dbModel.Customer_Table">
+        <MappingFragment StoreEntitySet="Customer_Table">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Customer_Phone" ColumnName="Customer_Phone" />
+          <ScalarProperty Name="Customer_Adderss" ColumnName="Customer_Adderss" />
+          <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Table">
+      <EntityTypeMapping TypeName="point_of_sales_dbModel.Employee_Table">
+        <MappingFragment StoreEntitySet="Employee_Table">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_Password" ColumnName="Employee_Password" />
+          <ScalarProperty Name="Employee_Phone" ColumnName="Employee_Phone" />
+          <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
+          <ScalarProperty Name="Employee_Type" ColumnName="Employee_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Table">
+      <EntityTypeMapping TypeName="point_of_sales_dbModel.Product_Table">
+        <MappingFragment StoreEntitySet="Product_Table">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Unit_Cost" ColumnName="Unit_Cost" />
+          <ScalarProperty Name="Unit_Price" ColumnName="Unit_Price" />
+          <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Catagory_ID" ColumnName="Product_Catagory_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplier_Table">
+      <EntityTypeMapping TypeName="point_of_sales_dbModel.Supplier_Table">
+        <MappingFragment StoreEntitySet="Supplier_Table">
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="Supplier_Email" ColumnName="Supplier_Email" />
+          <ScalarProperty Name="Supplier_Phone" ColumnName="Supplier_Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,5 @@
+F:\C sharp\Point Of Sales\Entities\bin\Debug\Entities.dll
+F:\C sharp\Point Of Sales\Entities\bin\Debug\Entities.pdb
+F:\C sharp\Point Of Sales\Entities\obj\Debug\Entities.dll
+F:\C sharp\Point Of Sales\Entities\obj\Debug\Entities.pdb
+F:\C sharp\Point Of Sales\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache

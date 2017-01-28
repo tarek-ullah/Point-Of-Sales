@@ -1,0 +1,6 @@
+F:\C sharp\Point Of Sales\Framework\bin\Debug\Framework.dll
+F:\C sharp\Point Of Sales\Framework\bin\Debug\Framework.pdb
+F:\C sharp\Point Of Sales\Framework\bin\Debug\MySql.Data.dll
+F:\C sharp\Point Of Sales\Framework\obj\Debug\Framework.dll
+F:\C sharp\Point Of Sales\Framework\obj\Debug\Framework.pdb
+F:\C sharp\Point Of Sales\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache

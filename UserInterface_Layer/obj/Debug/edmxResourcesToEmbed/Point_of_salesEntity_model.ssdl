@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PointOfSalesModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PointOfSalesModel1StoreContainer">
+    <EntitySet Name="Catagories" EntityType="PointOfSalesModel1.Store.Catagories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customers" EntityType="PointOfSalesModel1.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employees" EntityType="PointOfSalesModel1.Store.Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="PointOfSalesModel1.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Suppliers" EntityType="PointOfSalesModel1.Store.Suppliers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CatagoryProduct" Association="PointOfSalesModel1.Store.CatagoryProduct">
+      <End Role="Catagory" EntitySet="Catagories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="SupplierProduct" Association="PointOfSalesModel1.Store.SupplierProduct">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Catagories">
+    <Key>
+      <PropertyRef Name="Catagory_Id" />
+    </Key>
+    <Property Name="Catagory_Id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Catagory_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Catagory_unit_Measure" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Catagory_Description" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Customer_Id" />
+    </Key>
+    <Property Name="Customer_Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Customer_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Customer_Phone" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="Customer_Address" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Customer_Email" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="Employee_Id" />
+    </Key>
+    <Property Name="Employee_Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Employee_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Employee_Password" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Employee_Phone_number" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="Employee_Address" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Employee_Type" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="product_code" />
+    </Key>
+    <Property Name="product_code" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="unit_cost" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="unit_price" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="catagory" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Product_Description" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Stock" Type="int" Nullable="true" />
+    <Property Name="Supplier_Id" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Product_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Catagory_Catagory_Id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Supplier_Supplier_Id" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="Supplier_Id" />
+    </Key>
+    <Property Name="Supplier_Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Supplier_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Supplier_Email" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Supplier_Phone_no" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="CatagoryProduct">
+    <End Role="Catagory" Type="PointOfSalesModel1.Store.Catagories" Multiplicity="1" />
+    <End Role="Product" Type="PointOfSalesModel1.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catagory">
+        <PropertyRef Name="Catagory_Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Catagory_Catagory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SupplierProduct">
+    <End Role="Supplier" Type="PointOfSalesModel1.Store.Suppliers" Multiplicity="1" />
+    <End Role="Product" Type="PointOfSalesModel1.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Supplier_Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Supplier_Supplier_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

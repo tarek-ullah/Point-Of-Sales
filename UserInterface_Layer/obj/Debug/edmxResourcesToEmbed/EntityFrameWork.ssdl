@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="point_of_sales_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Catagory_Table">
+    <Key>
+      <PropertyRef Name="Catagory_ID" />
+    </Key>
+    <Property Name="Catagory_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Catagory_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Catagory_Unit" Type="int" />
+    <Property Name="Catagory_Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customer_Table">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_Phone" Type="int" />
+    <Property Name="Customer_Adderss" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employee_Table">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Employee_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_Password" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_Phone" Type="int" />
+    <Property Name="Employee_Address" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product_Table">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unit_Cost" Type="int" />
+    <Property Name="Unit_Price" Type="int" />
+    <Property Name="Product_Description" Type="varchar" MaxLength="50" />
+    <Property Name="Stock" Type="int" />
+    <Property Name="Supplier_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Product_Catagory_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Supplier_Table">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Supplier_Name" Type="nchar" MaxLength="10" />
+    <Property Name="Supplier_Email" Type="nchar" MaxLength="10" />
+    <Property Name="Supplier_Phone" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="point_of_sales_dbModelStoreContainer">
+    <EntitySet Name="Catagory_Table" EntityType="Self.Catagory_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer_Table" EntityType="Self.Customer_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Table" EntityType="Self.Employee_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Table" EntityType="Self.Product_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier_Table" EntityType="Self.Supplier_Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

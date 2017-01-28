@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="point_of_sales_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Catagory_Table">
+    <Key>
+      <PropertyRef Name="Catagory_ID" />
+    </Key>
+    <Property Name="Catagory_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Catagory_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Catagory_Unit" Type="Int32" />
+    <Property Name="Catagory_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Product_Table" Relationship="point_of_sales_dbModel.Product_TableCatagory_Table" FromRole="Catagory_Table" ToRole="Product_Table" />
+  </EntityType>
+  <EntityType Name="Customer_Table">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Phone" Type="Int32" />
+    <Property Name="Customer_Adderss" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee_Table">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employee_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Phone" Type="Int32" />
+    <Property Name="Employee_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Product_Table">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unit_Cost" Type="Int32" />
+    <Property Name="Unit_Price" Type="Int32" />
+    <Property Name="Product_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Stock" Type="Int32" />
+    <Property Name="Supplier_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_Catagory_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Supplier_Table" Relationship="point_of_sales_dbModel.Product_TableSupplier_Table" FromRole="Product_Table" ToRole="Supplier_Table" />
+    <NavigationProperty Name="Catagory_Table" Relationship="point_of_sales_dbModel.Product_TableCatagory_Table" FromRole="Product_Table" ToRole="Catagory_Table" />
+  </EntityType>
+  <EntityType Name="Supplier_Table">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Supplier_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Supplier_Email" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Supplier_Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Product_Table" Relationship="point_of_sales_dbModel.Product_TableSupplier_Table" FromRole="Supplier_Table" ToRole="Product_Table" />
+  </EntityType>
+  <EntityContainer Name="point_of_sales_dbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Catagory_Table" EntityType="Self.Catagory_Table" />
+    <EntitySet Name="Customer_Table" EntityType="Self.Customer_Table" />
+    <EntitySet Name="Employee_Table" EntityType="Self.Employee_Table" />
+    <EntitySet Name="Product_Table" EntityType="Self.Product_Table" />
+    <EntitySet Name="Supplier_Table" EntityType="Self.Supplier_Table" />
+    <AssociationSet Name="Product_TableSupplier_Table" Association="point_of_sales_dbModel.Product_TableSupplier_Table">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="Supplier_Table" EntitySet="Supplier_Table" />
+    </AssociationSet>
+    <AssociationSet Name="Product_TableCatagory_Table" Association="point_of_sales_dbModel.Product_TableCatagory_Table">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="Catagory_Table" EntitySet="Catagory_Table" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="Product_TableSupplier_Table">
+    <End Type="point_of_sales_dbModel.Product_Table" Role="Product_Table" Multiplicity="1" />
+    <End Type="point_of_sales_dbModel.Supplier_Table" Role="Supplier_Table" Multiplicity="*" />
+  </Association>
+  <Association Name="Product_TableCatagory_Table">
+    <End Type="point_of_sales_dbModel.Product_Table" Role="Product_Table" Multiplicity="1" />
+    <End Type="point_of_sales_dbModel.Catagory_Table" Role="Catagory_Table" Multiplicity="*" />
+  </Association>
+</Schema>
